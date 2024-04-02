@@ -14,4 +14,4 @@ Comandos:
 	git commit -m <nome do commit>
 
 5 - Enviar commit ao repositorio:
-	git push
+	git push ola
