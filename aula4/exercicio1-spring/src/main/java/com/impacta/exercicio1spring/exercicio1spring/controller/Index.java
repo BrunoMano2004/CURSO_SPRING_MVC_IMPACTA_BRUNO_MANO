@@ -10,9 +10,4 @@ public class Index {
 	public String Inicio() {
 		return "index";
 	}
-	
-	@GetMapping("/cadastro")
-	public String cadastro() {
-		return "cadastro";
-	}
 }
