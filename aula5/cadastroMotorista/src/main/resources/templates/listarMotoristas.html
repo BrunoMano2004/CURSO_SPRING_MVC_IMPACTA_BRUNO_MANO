@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<table border="1">
+		<tr>
+			<td>Nome</td>
+			<td>Endereco</td>
+			<td>Idade</td>
+			<td>Horas Trabalhadas</td>
+			<td>Valor Hora Trabalhada</td>
+			<td>Salario</td>
+		</tr>
+		
+		<tr th:each="motorista : ${motoristas}">
+			<td><span th:text="${motorista.nome}"></td>
+			<td><span th:text="${motorista.endereco}"></td>
+			<td><span th:text="${motorista.idade}"></td>
+			<td><span th:text="${motorista.horasTrabalhadas}"></td>
+			<td><span th:text="${motorista.valorHoraTrabalhada}"></td>
+			<td><span th:text="${motorista.salario}"></td>
+		</tr>
+	</table>
+</body>
+</html>
