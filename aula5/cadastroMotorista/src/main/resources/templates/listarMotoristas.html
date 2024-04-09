@@ -5,24 +5,33 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<table border="1">
-		<tr>
-			<td>Nome</td>
-			<td>Endereco</td>
-			<td>Idade</td>
-			<td>Horas Trabalhadas</td>
-			<td>Valor Hora Trabalhada</td>
-			<td>Salario</td>
-		</tr>
-		
-		<tr th:each="motorista : ${motoristas}">
-			<td><span th:text="${motorista.nome}"></td>
-			<td><span th:text="${motorista.endereco}"></td>
-			<td><span th:text="${motorista.idade}"></td>
-			<td><span th:text="${motorista.horasTrabalhadas}"></td>
-			<td><span th:text="${motorista.valorHoraTrabalhada}"></td>
-			<td><span th:text="${motorista.salario}"></td>
-		</tr>
+	<style>
+    	.tabela{
+    		border-width: 1px;
+    	}
+	</style>
+
+	<table border="1" class="tabela">
+		<thead>
+			<tr>
+				<th>Nome</th>
+				<th>Endereco</th>
+				<th>Idade</th>
+				<th>Horas Trabalhadas</th>
+				<th>Valor Hora Trabalhada</th>
+				<th>Salario</th>
+				</tr>
+		</thead>
+		<tbody>
+			<tr th:each="motorista : ${motoristas}">
+				<td><span th:text="${motorista.nome}"></td>
+				<td><span th:text="${motorista.endereco}"></td>
+				<td><span th:text="${motorista.idade}"></td>
+				<td><span th:text="${motorista.horasTrabalhadas}"></td>
+				<td><span th:text="${motorista.valorHoraTrabalhada}"></td>
+				<td><span th:text="${motorista.salario}"></td>
+			</tr>
+		</tbody>
 	</table>
 </body>
 </html>
