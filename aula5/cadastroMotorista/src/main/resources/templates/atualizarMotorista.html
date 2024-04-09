@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form method="post">
+		Id:<br>
+		<input type="number" name="id" readonly th:field="${motorista.id}"><br>
+		Nome:<br>
+		<input type="text" name="nome" th:field="${motorista.nome}"><br>
+		Endereço:<br>
+		<input type="text" name="endereco" th:field="${motorista.endereco}"><br>
+		Idade:<br>
+		<input type="number" name="idade" th:field="${motorista.idade}"><br>
+		Horas trabalhadas:<br>
+		<input type="number" name="horasTrabalhadas" th:field="${motorista.horasTrabalhadas}"><br>
+		Valor da hora trabalhada:<br>
+		<input type="number" name="valorHoraTrabalhada" th:field="${motorista.valorHoraTrabalhada}"><br><br>
+		
+		<input type="submit" name="submit" value="Enviar">
+	</form>
+</body>
+</html>

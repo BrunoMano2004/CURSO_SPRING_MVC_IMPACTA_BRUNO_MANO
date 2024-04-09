@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import cadastroMotorista.cadastroMotorista.model.MotoristaTO;
 
 @Repository
-public interface MotoristaRepository extends CrudRepository<MotoristaTO, String>{
-
+public interface MotoristaRepository extends CrudRepository<MotoristaTO, Integer>{
+	MotoristaTO findById(int id);
 }
