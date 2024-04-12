@@ -3,6 +3,7 @@ package sistemaDeProdutos.sistemaDeProdutos.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -11,6 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import jakarta.persistence.EntityManager;
 import sistemaDeProdutos.sistemaDeProdutos.model.ProdutoTO;
+import sistemaDeProdutos.sistemaDeProdutos.model.RelatorioTO;
 import sistemaDeProdutos.sistemaDeProdutos.repository.ProdutoRepository;
 
 @Controller
@@ -68,16 +70,16 @@ public class ProdutoController {
 		return "redirect:/listaProdutosRota";
 	}
 	
-	@GetMapping("/precoTotal")
+	@GetMapping("/relatorioRota")
 	public ModelAndView precoTotalProdutos() {
+		RelatorioTO relatorio = new RelatorioTO();
 		List<ProdutoTO> produtos = (List<ProdutoTO>)pr.findAll();
-		double precoTotal = 0;
 		for(ProdutoTO produto : produtos) {
-			precoTotal = (produto.getQntdEstoque() * produto.getPrecoUnitario()) + precoTotal; 
+			relatorio.setValorTotalProdutos((produto.getQntdEstoque() * produto.getPrecoUnitario()) + relatorio.getValorTotalProdutos()); 
 		}
 		
-		ModelAndView produtoMV = new ModelAndView("precoTotal");
-		produtoMV.addObject("precoTotal", precoTotal);
+		ModelAndView produtoMV = new ModelAndView("relatorio");
+		produtoMV.addObject("relatorio", relatorio);
 		
 		return produtoMV;
 	}
