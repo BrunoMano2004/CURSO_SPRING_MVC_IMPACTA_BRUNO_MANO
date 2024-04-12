@@ -1,10 +1,7 @@
 package revisao_api.revisao_api.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import revisao_api.revisao_api.model.PessoaTO;
 import revisao_api.revisao_api.repository.PessoaRepository;
 

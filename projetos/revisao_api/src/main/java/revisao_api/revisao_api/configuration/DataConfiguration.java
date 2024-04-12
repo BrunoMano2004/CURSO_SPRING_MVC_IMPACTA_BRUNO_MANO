@@ -18,11 +18,11 @@ public class DataConfiguration {
         //Drive do BD
         dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
         //URL do BD
-        dataSource.setUrl("jdbc:mysql://localhost:3306/db_curso_spring?useTimezone=true&serverTimezone=UTC");
+        dataSource.setUrl("jdbc:mysql://bckqenbq3usaz4qkwslx-mysql.services.clever-cloud.com/bckqenbq3usaz4qkwslx?useTimezone=true&serverTimezone=UTC");
         //Usuario
-        dataSource.setUsername("root");
+        dataSource.setUsername("uljqevhsfzgv4kmo");
         //Senha
-        dataSource.setPassword("bruno2004");
+        dataSource.setPassword("0tOWu1uzrmVlG2G8CUj7");
         return dataSource;
     }
 
