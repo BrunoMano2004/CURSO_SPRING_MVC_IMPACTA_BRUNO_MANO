@@ -21,4 +21,5 @@ public class PrimeiraApiController {
         repo.save(obj);
         return "O texto enviado foi: " + obj.getMeuTexto();
     }
+
 }

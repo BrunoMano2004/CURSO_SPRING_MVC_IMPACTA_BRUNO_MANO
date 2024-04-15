@@ -1,11 +1,13 @@
 package revisao_api.revisao_api.model;
 
 import jakarta.persistence.*;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import java.util.Objects;
 
 @Entity
 @Table(name="tb_pessoa")
+@EntityListeners(AuditingEntityListener.class)
 public class PessoaTO {
 
     @Id
