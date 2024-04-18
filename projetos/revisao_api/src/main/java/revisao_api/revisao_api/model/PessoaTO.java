@@ -24,6 +24,17 @@ public class PessoaTO {
     @Column(name="pessoa_cpf")
     private String cpf;
 
+    public PessoaTO() {
+        super();
+    }
+
+    public PessoaTO(long id, String nome, String email, String cpf) {
+        this.id = id;
+        this.nome = nome;
+        this.email = email;
+        this.cpf = cpf;
+    }
+
     public long getId() {
         return id;
     }

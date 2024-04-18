@@ -63,4 +63,13 @@ public class PessoaController {
 
         return "Sucesso ao atualizar";
     }
+
+    @GetMapping("/PessoaNome/{nome}")
+    public ResponseEntity<PessoaTO> listarPessoaPeloNome(@PathVariable(name = "nome") String nome) throws ResourceNotFoundException{
+        PessoaTO pessoa =
+                pessoaRepository
+                        .findByNome(nome)
+                        .orElseThrow(() -> new ResourceNotFoundException("Pessoa com o nome " + nome + " não encontrada!"));
+        return ResponseEntity.ok().body(pessoa);
+    }
 }
