@@ -15,4 +15,5 @@ public class UsuarioTO {
     private long id;
     private String nome;
     private long cpf;
+    private String senha;
 }
