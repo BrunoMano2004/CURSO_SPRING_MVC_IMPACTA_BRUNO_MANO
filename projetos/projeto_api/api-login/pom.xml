@@ -8,11 +8,11 @@
 		<version>3.2.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>integracao_api</groupId>
-	<artifactId>integracao_api</artifactId>
+	<groupId>api-login</groupId>
+	<artifactId>api-login</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>integracao_api</name>
-	<description>Fazer integração com api</description>
+	<name>api-login</name>
+	<description>API de login de usuario</description>
 	<properties>
 		<java.version>17</java.version>
 		<spring-cloud.version>2023.0.1</spring-cloud.version>
@@ -26,6 +26,7 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-openfeign</artifactId>
 		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
