@@ -21,11 +21,13 @@ public class LoginService {
 
     SenhaRequestDecrypt senha = new SenhaRequestDecrypt();
 
-    public boolean validacaoLogin(LoginTO login){
-        usuario = bancoClient.procurarPeloCpf(login.getCpf());
+    public boolean validacaoLogin(LoginTO login, String token, String authorization){
+        usuario = bancoClient.procurarPeloCpf(login.getCpf(), token, authorization);
         senha.setSenhaRequestDecrypt(usuario.getSenha());
-        usuario.setSenha(criptClient.descriptografarSenha(senha));
+        usuario.setSenha(criptClient.descriptografarSenha(senha, token, authorization));
 
         return login.getSenha().equals(usuario.getSenha());
     }
+
+
 }

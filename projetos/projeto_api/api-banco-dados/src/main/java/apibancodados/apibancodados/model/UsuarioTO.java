@@ -19,7 +19,7 @@ public class UsuarioTO {
 
     @Column(name = "senha_usuario")
     private String senha;
-
+    
     @Column(name = "cpf_usuario")
     private long cpf;
 
